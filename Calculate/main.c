@@ -9,7 +9,6 @@ int main() {
         printf(" >> ");
         scanf("%d %c %d", &num1, &operation, &num2);
         printf("\n");
-
         
         switch(operation) {
             case '+':
@@ -32,6 +31,7 @@ int main() {
                 }
                 else {
                     printf("Zero Error\n");
+                    break;
             }
         }
     }
