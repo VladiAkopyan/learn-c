@@ -43,6 +43,7 @@ int checkUserBan() {
     line[strcspn(line, "\n")] = '\0';
 
     if (strcmp(line, "User Is Banned") == 0) {
+        fclose(file);
         return 1;
     }
 
@@ -54,7 +55,6 @@ int writeBan() {
     FILE *file = fopen("user.txt", "w");
 
     fprintf(file, "User Is Banned");
-
     return 1;
 }
 
