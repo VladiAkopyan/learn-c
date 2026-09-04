@@ -46,7 +46,8 @@ int checkUserBan() {
         fclose(file);
         return 1;
     }
-
+    
+    fclose(file);
     return 0;
 
 }
@@ -55,6 +56,7 @@ int writeBan() {
     FILE *file = fopen("user.txt", "w");
 
     fprintf(file, "User Is Banned");
+    fclose(file);
     return 1;
 }
 
