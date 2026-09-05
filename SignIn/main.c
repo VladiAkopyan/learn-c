@@ -62,6 +62,7 @@ int writeBan() {
 
 
 int main() {
+    checkUserBan();
 
     if (checkUserBan() == 1) {
         printf("You are banned!");
@@ -86,6 +87,10 @@ int main() {
             printf("OverFlow Score.\nYou Are Banned.");
             writeBan();
             return 1;
+        }
+
+        if (strlen(input) != 4) {
+            printf("It must be 4 characters.\n");
         }
 
         if (checkPassword(input) == 0) {
